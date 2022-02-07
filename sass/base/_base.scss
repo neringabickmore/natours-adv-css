@@ -1,0 +1,19 @@
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is hence in base
+    // and not typography.
+    font-size: 62.5%;
+}
+
+body {
+    /* height and width will be defined 
+    incl padding by defining box-size */
+    box-sizing: border-box;
+}
