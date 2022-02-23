@@ -1,5 +1,5 @@
-*, 
-*::after, 
+*,
+*::after,
 *::before {
     margin: 0;
     padding: 0;
@@ -9,11 +9,34 @@
 html {
     // This defines what 1rem is hence in base
     // and not typography.
-    font-size: 62.5%;
+    font-size: 62.5%; //1rem = 10px; 10px/16px = 62%
+
+
+    @include respond (tab-land) {
+        //width <1200?
+        font-size: 56.25%; //1rem = 9px; 9/16
+    }
+
+    @include respond (tab-port) {
+        //width <900?s
+        font-size: 50%; //1rem = 8px; 8/16
+    }
+
+    @include respond (big-desktop) {
+        font-size: 75%; //1rem = 12px 12/16
+    }
+
 }
+
 
 body {
     /* height and width will be defined 
     incl padding by defining box-size */
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond (tab-port) {
+        padding: 0;
+    }
+
 }
